@@ -1,0 +1,46 @@
+package bootcamp;
+
+import java.io.IOException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Positiveintegers {
+
+	public static void main(String[] args) throws NumberFormatException,IOException {
+		//initialize the variable sum
+		int sum=0;
+		try
+		{
+		//using array to stor integer values
+		int[] n=new int[5];
+		//read the 5 integer values through scanner
+		Scanner sc=new Scanner(System.in);
+		//prompt the user for input values
+		System.out.println("enter integers");
+		//using for loop to read input values
+		for(int i=0;i<5;i++)
+		{
+		n[i]=sc.nextInt();
+		if(n[i]<0)
+		{
+			
+			sum=sum+0;
+		}
+		else
+		{
+			sum=sum+n[i];
+		}
+	
+		}
+		}
+		catch(InputMismatchException ie)
+		{
+			System.out.println("please enter valid input values");
+		}
+
+		
+		//prompt the user for output values
+		System.out.println("the sum of positive integers are:" +sum);
+
+	}
+}
